@@ -65,19 +65,27 @@ public class Queue {
         return item;
     }
     
+    void printArray() {
+        if(this.array.length == 0) {
+            System.out.println("Empty queue!");
+        } else {
+            for(int i = 0; i < this.array.length; i++) {
+                System.out.print(this.array[i]+",");
+            }
+            System.out.println("");
+        }
+    }
     public static void main(String[] args){
-        Queue queue = new Queue(10);
+        Queue queue = new Queue(3);
            
         queue.enqueue(10);
-//        queue.enqueue(20);
-//        queue.enqueue(30);
-//        queue.enqueue(40);
-       
-       
-        System.out.println("Front item is " + 
-                               queue.front());
-          
-        System.out.println("Rear item is " + 
-                                queue.rear());
+        queue.enqueue(20);
+        queue.enqueue(30);
+        queue.dequeue();
+        queue.enqueue(40);
+
+        System.out.println("Front item is " + queue.front() + ", locate at " + queue.front);
+        System.out.println("Rear item is " + queue.rear() + ", locate at " + queue.rear);
+        queue.printArray();
     }
 }
