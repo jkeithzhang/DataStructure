@@ -11,29 +11,7 @@ package dstree;
  */
 public class BinaryTree {
     
-    // Root of Binary Tree
-    BinaryTree root;
- 
-    // Constructor 1
-    BinaryTree(int key){
-        this.root = new BinaryTree(key);
+    public static void main(String[] args) {
+
     }
-
-    // Constructor 2
-    BinaryTree(){
-        this.root = null;
-    }    
-
 } 
-
-class Node {
-    int key;
-    BinaryTree left;
-    BinaryTree right;
-    
-    public Node(int key) {
-        this.key = key;
-        left = right = null;
-    }
-}
-
