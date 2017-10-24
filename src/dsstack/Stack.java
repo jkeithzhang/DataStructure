@@ -11,7 +11,7 @@ package dsstack;
  */
 public class Stack {
     static final int MAX = 1000;
-    int top;
+    int top = -1;
     int a[] = new int[MAX];
     
     boolean isEmpty() {
@@ -41,6 +41,8 @@ public class Stack {
     public static void main(String args[]) {
         Stack s = new Stack();
         s.push(1);
-        System.out.println();
+        s.pop();
+        System.out.println(s.top);
+        System.out.println(s.isEmpty());
     }
 }
