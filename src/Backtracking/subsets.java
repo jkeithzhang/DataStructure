@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package backtracking;
+package Backtracking;
 
 import java.util.*;
 /**
@@ -17,9 +17,9 @@ public class subsets {
         if(nums.length<=0){ 
             return res; 
         } 
-        Arrays.sort(nums); 
+//        Arrays.sort(nums); 
         List<Integer> tmp=new ArrayList<Integer>(); 
-        dfs(0,nums,tmp, res); 
+        dfs(0,nums,tmp,res); 
         return res; 
     }
     
@@ -33,7 +33,7 @@ public class subsets {
     }
     
     public static void main(String[] args) {
-         int[] input = {1,2,3,4,5};
+         int[] input = {1,2,3};
          subsets a = new subsets();
          List<List<Integer>> ret = a.subsets(input);
          System.out.println(ret);
