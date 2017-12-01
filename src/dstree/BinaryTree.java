@@ -22,10 +22,12 @@ public class BinaryTree {
         private int data;
     }
     
+    
+    
     public static void main(String[] args) {
 //        BinaryTree a = new BinaryTree();
 //        a.root = new node();
-        node a = new node();
-        a.data = 2; 
+//        node a = new node();
+//        a.data = 2; 
    }
 } 
