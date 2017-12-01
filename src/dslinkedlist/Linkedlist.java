@@ -11,7 +11,6 @@ package dslinkedlist;
  */
 public class Linkedlist {
     node head;
-    
     public Linkedlist(int d) {
         node head = new node(d);
         this.head = head;
@@ -23,6 +22,6 @@ public class Linkedlist {
         public node(int d) {
             this.data = d;
         }
-    }   
+    }
 }
 
