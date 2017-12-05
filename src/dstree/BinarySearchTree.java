@@ -11,6 +11,18 @@ package dstree;
  * @author kezhang
  */
 public class BinarySearchTree {
-
+    private node root;
+    
+    private class node {
+        private node left;
+        private node right;
+        private int data;
+        
+        public node(int val) {
+            this.data = val;
+            this.right = null;
+            this.left = null;
+        }
+    }  
 }
 
