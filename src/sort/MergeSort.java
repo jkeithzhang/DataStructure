@@ -42,8 +42,7 @@ class MergeSort
         int k = l;
         while (i < n1 && j < n2)
         {
-            if (L[i] <= R[j])
-            {
+            if (L[i] <= R[j]) {
                 arr[k] = L[i];
                 i++;
             }
@@ -76,42 +75,28 @@ class MergeSort
     // merge()
     void sort(int arr[], int l, int r)
     {
-        if (l < r)
-        {
-            // Find the middle point
-            int m = (l+r)/2;
- 
-            // Sort first and second halves
+        if (l < r) {
+            int m = (l+r)/2; 
             sort(arr, l, m);
             sort(arr , m+1, r);
- 
-            // Merge the sorted halves
             merge(arr, l, m, r);
         }
     }
  
-    /* A utility function to print array of size n */
-    static void printArray(int arr[])
-    {
+    static void printArray(int arr[]) {
         int n = arr.length;
         for (int i=0; i<n; ++i)
-            System.out.print(arr[i] + " ");
+        System.out.print(arr[i] + " ");
         System.out.println();
     }
  
-    // Driver method
-    public static void main(String args[])
-    {
+    public static void main(String args[]) {
         int arr[] = {64, 34, 25, 12, 22, 11, 90};
- 
         System.out.println("Given Array");
         printArray(arr);
- 
         MergeSort ob = new MergeSort();
         ob.sort(arr, 0, arr.length-1);
- 
         System.out.println("\nSorted array");
         printArray(arr);
     }
 }
-/* This code is contributed by Rajat Mishra */
