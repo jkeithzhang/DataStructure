@@ -5,6 +5,8 @@
  */
 package dstree;
 
+import java.util.*;
+
 /**
  *
  * @author Ke Zhang
@@ -63,6 +65,22 @@ public class BinaryTree {
         System.out.print(n.data);
     }
     
+    public void findPath(node root, int t, int[] arr, int cur) {
+        if(root==null)
+            return;
+        arr[cur]=root.data;
+        cur++;
+        
+        if(root.data==t) {
+            for(int i=0; i<cur; i++) {
+                System.out.println(arr[i]);
+            }            
+        } else {
+            findPath(root.left, t, arr, cur);
+            findPath(root.right, t, arr, cur);
+        }
+    }
+    
     public static void main(String[] args) {
         BinaryTree bt = new BinaryTree(5);
         bt.addNodeToLeft(bt.root, 4);
@@ -70,7 +88,9 @@ public class BinaryTree {
         bt.addNodeToRight(bt.root.left, 3);
         bt.addNodeToLeft(bt.root.left, 2);
         bt.addNodeToRight(bt.root.right, 7);
-        bt.inOrderTraversal(bt.root);
-        
+//        bt.inOrderTraversal(bt.root);     
+        List<Integer> l = new ArrayList<Integer>();   
+        int arr[] = new int[1000];
+        bt.findPath(bt.root, 7, arr, 0);
     }
-} 
+}

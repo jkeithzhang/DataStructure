@@ -5,18 +5,23 @@
  */
 package dslinkedlist;
 
+import java.util.Collection;
 import java.util.Stack;
 
 /**
  *
  * @author Ke Zhang
  */
-public class Linkedlist {
+public class Linkedlist<T> {
     node head;
     public Linkedlist(int d) {
         node head = new node(d);
         this.head = head;
     }    
+    
+    public Linkedlist(Collection <? extends T> c) {
+        
+    }
     
     private class node {
         private int data;

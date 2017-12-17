@@ -18,8 +18,4 @@ public class gcd {
         else
             return gcd(b, a%b);
     }
-    
-    public int gcd_2(int a, int b) {
-        return 0;
-    }
 }
